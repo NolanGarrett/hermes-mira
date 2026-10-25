@@ -1,0 +1,15 @@
+name: hermes-mira
+label: MIRA developer preview
+kind: platform
+version: 0.1.0
+platforms:
+  - mira
+manifest_version: 2
+requires_hermes: ">=0.22.0"
+description: Unofficial loopback-only MIRA companion platform. In-process gateway plugin; no hardware or SDK validation.
+python_dependencies:
+  - aiohttp
+optional_env:
+  - name: MIRA_ALLOWED_USERS
+    description: Explicit native gateway principal allowlist; pairing alone does not grant gateway access.
+    password: false

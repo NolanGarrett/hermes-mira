@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Hermes MIRA | Developer preview</title><link rel="stylesheet" href="/style.css"></head>
+<body><main>
+<header><span class="eyebrow">UNOFFICIAL · ISOLATED DEVELOPER PREVIEW</span><h1>Hermes ↔ MIRA</h1><p>Native gateway. Simulated glasses, ring and microphone. Preview launcher uses synthetic inference.</p></header>
+<section class="pair"><label for="code">One-time local operator code</label><div class="row"><input id="code" type="password" autocomplete="off" spellcheck="false" placeholder="Expires in 60 seconds"><button id="pair">Pair foreground</button><button id="revoke">Revoke</button></div><p id="auth" role="status">Not paired. Credentials remain in memory; reload requires re-pairing.</p></section>
+<div class="layout"><section><div class="glass-header"><span>SIMULATED 640 × 480 DISPLAY</span><span id="page">1 / 1</span></div><canvas id="glass" width="640" height="480" aria-label="Simulated glasses answer"></canvas><pre id="accessible" class="sr-only" aria-live="polite"></pre><p><strong id="state">cancelled</strong> <span id="status"></span></p></section>
+<section class="controls"><label for="text">Typed transcript / followup</label><textarea id="text" rows="4" placeholder="Type a synthetic request"></textarea><button id="submit">Submit typed</button>
+<div class="row"><button data-event="tap">Tap</button><button data-event="hold-start">Hold start</button><button data-event="hold-end">Hold end</button></div>
+<div class="row"><button data-event="swipe-forward">← Previous / swipe forward</button><button data-event="swipe-backward">Next / swipe backward →</button></div>
+<div class="row"><button data-event="sidebar">Toggle sidebar</button><button data-event="app-exit">Exit</button><button data-event="app-open">Open</button></div>
+<div class="row"><button id="cancel">Cancel / stop</button><button id="recover">Reconnect / recover</button></div>
+<fieldset><legend>Synthetic fault controls</legend><label><input type="checkbox" id="phone"> Phone offline</label><label><input type="checkbox" id="device"> Glasses offline</label><label for="fixture">Next request</label><select id="fixture"><option value="">Typed transcript</option><option value="fixture:long">Long Unicode answer</option><option value="fixture:delay">Delayed response (3 seconds)</option><option value="fixture:timeout">Long delay (8 seconds)</option><option value="fixture:backend">Backend failure</option><option value="fixture:approval">Unavailable approval</option><option value="fixture:followup">Continuity followup</option></select></fieldset>
+</section></div>
+<footer>Foreground-only ephemeral pairing · no persistent sign-in · no hardware claim<br>Unknown outcomes must be reconciled, never blindly resubmitted. Stop is not a rollback.</footer>
+</main><script type="module" src="/app.js"></script></body></html>

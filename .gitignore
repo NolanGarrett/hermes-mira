@@ -1,0 +1,22 @@
+# Dependencies and generated local test output
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+evidence/
+artifacts/
+
+# Local configuration, credentials and isolated runtime state
+.env
+.env.*
+*.pem
+*.key
+.hermes/
+mira-preview-*/
+mira-dist-smoke-*/
+*.sock
+
+# Editor/OS metadata
+.DS_Store
+.vscode/
+.idea/
